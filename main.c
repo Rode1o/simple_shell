@@ -18,10 +18,12 @@ int main(void)
 
 	signal(SIGINT,  sigint_handler);
 
-	while (1)
+	while(1)
 	{
-
-		_putchar('$');
+		if (isatty(STDIN_FILENO))
+		{
+			 _putchar('$');
+		}
 		num = getline(&line, &bufsize, stdin);
 		if (num == EOF)
 		{
