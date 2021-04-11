@@ -13,6 +13,7 @@ int main(void)
 	char *line = NULL;
 	size_t bufsize = 0;
 	int num;
+	char *str = "#C_isfun ";
 	char *tok[100];
 	int validators = 1;
 
@@ -22,7 +23,7 @@ int main(void)
 	{
 		if (isatty(STDIN_FILENO))
 		{
-			 _putchar('$');
+			write(STDOUT_FILENO, str, 9); 
 		}
 		num = getline(&line, &bufsize, stdin);
 		if (num == EOF)
