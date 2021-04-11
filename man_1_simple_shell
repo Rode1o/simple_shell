@@ -1,0 +1,37 @@
+.TH SIMPLE_SHELL 1   "APRIL 15 2021" "HOLBERTON SCHOOL CH14"
+
+
+.SH NAME
+  Simple_shell.
+- simple shell that can be compiled and executed from the command line.
+
+.SH SYNOPSIS
+
+.B ./hsh
+
+.SH  DESCRIPTION
+.B Simple Shell is command interpreter that executes commands read from the standard input
+
+.SH  EXAMPLES
+
+.IP -Compilling
+gcc -Wall -Werror -Wextra -pedantic *.c -o hsh
+
+
+.IP -Interactive-mode.
+
+.B ./hsh
+
+.B /bin/ls
+
+.IP -Not-interactive-form
+.B echo "/bin/ls" | ./hsh
+
+
+.SH AUTHORS
+
+.B Juan José Arteta Maury 
+.B <jj131204@gmail.com> 
+
+.B Duvan Rodelo
+.B <dumirola.dr@gmail.com>
