@@ -1,10 +1,12 @@
 #include "holberton.h"
 
 /**
+ *token - divide the string line into tokens
+ *	  according to the delimiter (SEPARATORS)
  *
+ *@line: arguments received
  *
- *
- *
+ *@tok: devided tokens.
  */
 
 void token(char *line, char *tok[])

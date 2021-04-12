@@ -1,9 +1,19 @@
 #include "holberton.h"
 
-int execute(char *tokens[], char *line)
+/**
+ *execute - check  if the command recived is true.
+ *
+ *@tokens: recives the value of  the funcion token.
+ *
+ *@line: arguments received
+ *
+ *Return: return (1).
+ */
+
+int execute(char **tokens, char *line)
 {
 	pid_t pid;
-	int j, status;
+	int j /*status*/;
 
 	char path[1024] = "/bin", *aux = "/b", *aux2 = " /b.h";
 
@@ -39,9 +49,7 @@ int execute(char *tokens[], char *line)
 	}
 	else
 	{
-		do {
-			waitpid(pid, &status, WUNTRACED);
-		} while (!WIFEXITED(status) && !WIFSIGNALED(status));
+		wait(NULL);
 	}
 	return (1);
 }

@@ -1,11 +1,9 @@
 #include "holberton.h"
 
 /**
+ *main - start de simple_shell
  *
- *
- *
- *
- *
+ *Return: return(0);
  */
 
 int main(void)
@@ -19,11 +17,11 @@ int main(void)
 
 	signal(SIGINT,  sigint_handler);
 
-	while(1)
+	while (1)
 	{
 		if (isatty(STDIN_FILENO))
 		{
-			write(STDOUT_FILENO, str, 10); 
+			write(STDOUT_FILENO, str, 10);
 		}
 		num = getline(&line, &bufsize, stdin);
 		if (num == EOF)
@@ -39,10 +37,10 @@ int main(void)
 		if (validators == 0)
 		{
 			free(line);
-			return(0);
+			return (0);
 		}
 		else
-		{	
+		{
 			execute(tok, line);
 		}
 	}

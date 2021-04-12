@@ -1,5 +1,12 @@
 #include "holberton.h"
 
+/**
+ *_env - tenvironment variable
+ *
+ *@commands: recives the value of  the funcion token.
+ *
+ */
+
 void _env(char **commands)
 {
 	int i;
@@ -18,6 +25,14 @@ void _env(char **commands)
 
 	}
 }
+
+/**
+ *_cd - functions.
+ *
+ *@args: recives the value of  the funcion token.
+ *
+ *Return: return(2);
+ */
 
 int _cd(char **args)
 {

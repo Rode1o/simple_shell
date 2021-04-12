@@ -1,5 +1,11 @@
 #include "holberton.h"
 
+/**
+*errors - printf if de comand recived is incorrect.
+*
+* @tokens: recives the value of  the funcion token.
+*/
+
 void errors(char __attribute__((unused)) **tokens)
 {
 	if (tokens[0])

@@ -53,24 +53,26 @@ int _strcmp(char *s1, char *s2)
 	}
 	return (0);
 }
+/**
+ * _strcat - Concatenates two strings.
+ *
+ * @dest: Destiny.
+ * @src: Source.
+ *
+ * Return: Always (0).
+ */
+
 char *_strcat(char *dest, char *src)
 {
-        int i = 0;
-        int r = 0;
+	int i = 0, j = 0;
 
-        while (dest[i])
-        {
-                i++;
-        }
-        while (src[r])
-        {
-                dest[i] = src[r];
+	while (dest[i] != '\0')
+		i++;
 
-                i++;
-                r++;
-        }
-        dest[i] = '\0';
+	for (j = 0; src[j] != '\0'; j++, ++i)
+		dest[i] = src[j];
 
-        return (dest);
+	dest[i] = '\0';
+
+	return (dest);
 }
-
