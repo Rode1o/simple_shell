@@ -15,8 +15,6 @@ extern char **environ;
 
 int main(void);
 void token(char *line, char **tok);
-/*int execute(char *tok[]);
-*/
 int execute(char *tokens[], char *line);
 int _putchar(char c);
 void path(char *path);
