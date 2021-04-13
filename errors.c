@@ -6,9 +6,9 @@
 * @tokens: recives the value of  the funcion token.
 */
 
-void errors(char __attribute__((unused)) **tokens)
+void errors(char **error)
 {
-	if (tokens[0])
+	if (error[0])
 	{
 	write(STDOUT_FILENO, "hsh", 3);
 	write(STDOUT_FILENO, ": ", 2);
