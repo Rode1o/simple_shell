@@ -102,4 +102,5 @@ List of allowed functions and system calls:
 
 ### Date
 Start  31/Mar/21 - End 15/Apr/21
-#### [License](https://github.com/jj131204/simple_shell/blob/master/LICENSE) 
+####
+#### [Copyright](https://github.com/jj131204/simple_shell/blob/master/LICENSE) 
