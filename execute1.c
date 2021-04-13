@@ -13,25 +13,18 @@
 int execute(char **tokens, char *line)
 {
 	pid_t pid;
-	int j /*status*/;
+	int i = 0;
 
-	char path[1024] = "/bin", *aux = "/b", *aux2 = " /b.h";
+	char path[1024] = "/bin", *aux = "/b";
 
-	if (line[0] == aux[0] && line[1] == aux[1])
+
+	/*if (line[i] == aux[0] && line[i + 1] == aux[1])
+	{	
 		_strcpy(path, line);
-	else if (line[0] == aux2[0])
-	{
-		for (j = 0; line[j] != '\0'; j++)
-		{
-			if (line[j] == aux2[1])
-				if (line[j - 1] == aux2[0])
-					_strcpy(path, "/bin/ls");
-		}
-	}
-	else if (line[0] == aux2[3] && line[2] == aux2[4])
-		_strcpy(path, "/bin/ls");
-	else
-		_strcat(path, "/"), _strcat(path, line);
+	}*/
+
+	_strcat(path, "/"), _strcat(path, *tokens);
+
 	pid = fork();
 	if (pid == 0)
 	{

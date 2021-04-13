@@ -27,7 +27,7 @@ int main(void)
 		if (num == EOF)
 		{
 			free(line);
-			return (0);
+			return(0);
 		}
 
 
@@ -37,7 +37,7 @@ int main(void)
 		if (validators == 0)
 		{
 			free(line);
-			return (0);
+			exit(0);
 		}
 		else
 		{
