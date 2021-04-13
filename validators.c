@@ -13,7 +13,7 @@ int line_validator(char *tok[])
 {
 	if (tok[0] == NULL)
 	{
-		return(2);
+		return (2);
 	}
 	if (_strcmp(tok[0], "exit") == 0)
 	{

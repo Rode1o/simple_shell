@@ -20,25 +20,18 @@ int execute(char **tokens, char *line)
 	while (line[i] == ' ')
 		i++;
 
-	/*printf("%s", tokens[0]);
-*/
 	if (line[i] == path[0])
 	{
 		_strcpy(path, *tokens);
 	}
 
-/*	else
-		_strcat(path, "/"), _strcat(path, *tokens);
-*/
-	else if (tokens[0]) 
+	else if (tokens[0])
 	{
 		_strcat(path, "/"), _strcat(path, *tokens);
 	}
-
 	else
 	{
-		return(0);
-		tokens = NULL;
+		return (0);
 	}
 	pid = fork();
 	if (pid == 0)
@@ -55,8 +48,7 @@ int execute(char **tokens, char *line)
 		return (0);
 	}
 	else
-	{
 		wait(NULL);
-	}
+
 	return (1);
 }
