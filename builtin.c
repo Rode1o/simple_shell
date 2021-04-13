@@ -38,13 +38,13 @@ int _cd(char **args)
 {
 	if (args[1] == NULL)
 	{
-		return (2);
+		/*errors(args);*/
 	}
 	else
 	{
 		if (chdir(args[1]) != 0)
 		{
-			errors(args);
+			chdir(args[1]);
 		}
 	}
 	return (2);

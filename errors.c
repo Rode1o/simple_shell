@@ -3,7 +3,7 @@
 /**
 *errors - printf if de comand recived is incorrect.
 *
-* @tokens: recives the value of  the funcion token.
+* @error: recives the value of  the funcion token.
 */
 
 void errors(char **error)
