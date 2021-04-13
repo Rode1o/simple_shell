@@ -8,9 +8,14 @@
 
 void sigint_handler(int sigint)
 {
-	(void)sigint;
-
-	signal(SIGINT, sigint_handler);
+	
+	if (sigint == SIGINT)
+	{
+		printf("oo");	
+	
+	}
+	
+	/*signal(SIGINT, sigint_handler);
 	write(STDOUT_FILENO, "\n$ ", 3);
-	fflush(stdout);
+	fflush(stdout);*/
 }

@@ -15,10 +15,12 @@ int main(void)
 	char *tok[100];
 	int validators = 1;
 
-	signal(SIGINT,  sigint_handler);
+	/*signal(SIGINT, sigint_handler); sigint_handler*/
 
 	while (1)
 	{
+		signal(SIGINT, sigint_handler);
+
 		if (isatty(STDIN_FILENO))
 		{
 			write(STDOUT_FILENO, str, 10);
