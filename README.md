@@ -86,7 +86,7 @@ List of allowed functions and system calls:
 -   write (man 2 write)
 ## FLowchart
 <details>
- 
+ <img src="https://github.com/jj131204/simple_shell/blob/master/Features/flow_chart.jpg" />
 </details>
 
 ## Authors
