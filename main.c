@@ -12,7 +12,7 @@ int main(void)
 	size_t bufsize = 0;
 	int num;
 	char *str = "#C_isfun$ ";
-	char *tok[100];
+	char *tok[1024];/*valor cualquira*/
 	int validators = 1;
 
 	/*signal(SIGINT, sigint_handler); sigint_handler*/
@@ -25,6 +25,7 @@ int main(void)
 		{
 			write(STDOUT_FILENO, str, 10);
 		}
+
 		num = getline(&line, &bufsize, stdin);
 		if (num == EOF)
 		{
@@ -32,14 +33,13 @@ int main(void)
 			return (0);
 		}
 
-
 		token(line, tok);
 		validators = line_validator(tok);
 
 		if (validators == 0)
 		{
 			free(line);
-			return (0);
+			exit(0);
 		}
 		else
 		{
