@@ -52,6 +52,7 @@ To exit program:
 |Builtin.c||
 |controld.c||
 |errors.c||
+|execute1.c||
 
 ### Restrictions
 List of allowed functions and system calls:
