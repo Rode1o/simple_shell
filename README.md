@@ -51,7 +51,7 @@ To exit program:
 |README.md|	|
 |Builtin.c|Analyzes and runs the builtins|
 |controld.c||
-|errors.c||
+|errors.c|Contains the function in charge of the error outputs|
 |execute1.c|Executes arguments given by main (getline) function|
 |strfunctions.c|Auxiliary functions for printing|
 |token.c|Interprets user input with the delimiters |
