@@ -38,7 +38,7 @@ int execute(char **tokens, char *line)
 		if (execve(path, tokens, environ) == -1)
 		{
 			errors(tokens);
-			exit(EXIT_FAILURE);
+			return (0);
 		}
 	}
 	else if (pid < 0)
