@@ -36,7 +36,7 @@ int main(void)
 		if (validators == 0)
 		{
 			free(line);
-			exit(0);
+			return (-1);
 		}
 		else if (validators == 3)
 			_env(tok);
