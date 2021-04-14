@@ -7,12 +7,12 @@
  On most linux systems a program called bash (which stands for Bourne Again Shell, an enhanced version of the original Unix shell program , sh, written by Steve Bourne) acts as the shell program. Besides bash, there are other shell programs available for LINUX sys.
  Usage: `simple_shell`
  It: Displays a prompt and waits for the user to type a command. A command line always ends with a new line. The prompt is displayed again each time a command has been executed. The command lines are simple, no semicolons, no pipes, redirections or any advanced features. The command lines are made only of one word. Arguemtns can be passed to programs. If an executable cannot be found, prints an error message and and displays the prompt again. It can handle errors. It also handles the  "end of file" condition (Ctrl + D) handles the PATH to exit built-in, that exits the shell uses the env as a built-in, that prints the current environment Handles Ctrl+C: the shell does not quit when the user inputs ^C Handles the built in command cd (cd [directory], cd .. and cd)
-## Getting started 
+## Getting started
 This shell is compiled by this way:
 ### Compilation
 
     gcc -Wall -Werror -Wextra -pedantic *.c -o hsh
-### Usage    
+### Usage
 It works both:
 Interactive mode:
 
@@ -23,14 +23,14 @@ Interactive mode:
     (#C_isFun) exit
     $
  Non-interactive mode:
- 
+
 
     $ echo "/bin/ls | ./hsh
     hsh main.c token.c
     $
  ### Executable commands
  Input commands followed by an enter. Some examples shown below:
- 
+
 
     (#C_isFun) ls -la
     (#C_isFun) /bin/ls
@@ -90,12 +90,12 @@ List of allowed functions and system calls:
 </details>
 
 ## Authors
-**Juan Jose Arteta** 
+**Juan Jose Arteta**
 
  - [ ] [Social media](https://twitter.com/jarteta2004)
  - [ ] [Contact me!](https://github.com/jj131204)
- 
-**Duvan Rodelo** 
+
+**Duvan Rodelo**
  - [ ] [Social media](https://twitter.com/duvanrode1o)
  - [ ] [Contact me!](https://github.com/Rode1o)
 
@@ -103,4 +103,4 @@ List of allowed functions and system calls:
 ### Date
 Start  31/Mar/21 - End 15/Apr/21
 ####
-#### [Copyright](https://github.com/jj131204/simple_shell/blob/master/LICENSE) 
+#### [Copyright](https://github.com/jj131204/simple_shell/blob/master/LICENSE)

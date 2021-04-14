@@ -9,6 +9,8 @@
 #include <sys/stat.h>
 
 #define SEPARATORS " ,!?\'\"\n\t"
+#define STDOUT STDOUT_FILENO
+#define STDIN STDIN_FILENO
 
 extern char **environ;
 

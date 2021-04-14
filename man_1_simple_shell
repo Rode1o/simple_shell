@@ -30,8 +30,8 @@ gcc -Wall -Werror -Wextra -pedantic *.c -o hsh
 
 .SH AUTHORS
 
-.B Juan José Arteta Maury 
-.B <jj131204@gmail.com> 
+.B Juan José Arteta Maury
+.B <jj131204@gmail.com>
 
 .B Duvan Rodelo
 .B <dumirola.dr@gmail.com>
