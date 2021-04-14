@@ -1,5 +1,6 @@
 #include "holberton.h"
 
+
 /**
  *execute - check  if the command recived is true.
  *
@@ -31,6 +32,8 @@ int execute(char **tokens, char *line)
 	}
 	else
 	{
+		*tokens = NULL;
+		line = NULL;
 		return (0);
 	}
 	pid = fork();
