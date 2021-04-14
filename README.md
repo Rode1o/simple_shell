@@ -50,7 +50,7 @@ To exit program:
 |AUTHORS | Creators|
 |README.md|	|
 |Builtin.c|Analyzes and runs the builtins|
-|controld.c||
+|controld.c|include the function in charge of handling signs. |
 |errors.c|Contains the function in charge of the error outputs|
 |execute1.c|Executes arguments given by main (getline) function|
 |strfunctions.c|Auxiliary functions for printing|
