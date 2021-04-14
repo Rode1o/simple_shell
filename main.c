@@ -1,50 +1,53 @@
-#include "holberton.h"
-
+#include "header.h"
 /**
- *main - start de simple_shell
+ * main - main function.
  *
- *Return: return(0);
+ * Return: 0.
  */
 
 int main(void)
 {
+	int sign = 1;
 	char *line = NULL;
-	size_t bufsize = 0;
-	int num;
-	/*char *str = "#C_isfun$ ";*/
-	char *tok[1024];/*valor cualquira*/
-	int validators = 1;
-	char buffer[1024];
+	char **tokens = NULL;
+	char *str = "#Caribe_isFun ";
+	int condition = 1;
 
-	signal(SIGINT, sigint_handler);
-	while (1)
-	{
+	signal(SIGINT, sigint_controld);
+
+
+	while (condition)
+{
 		if (isatty(STDIN_FILENO))
 		{
-			printf("%s~ ", getcwd(buffer, 1024));
-			/*write(STDOUT_FILENO, str, 10);*/
-		}
-		num = getline(&line, &bufsize, stdin);
-		if (num == EOF)
-		{
-			free(line);
-			return (0);
-		}
-		token(line, tok);
-		validators = line_validator(tok);
+			write(STDOUT_FILENO, str, 14);
 
-		if (validators == 0)
-		{
-			free(line);
-			exit(0);
 		}
-		else if (validators == 3)
-			_env(tok);
-		else if (validators == 4)
-			_cd(tok);
-		else
-			execute(tok, line);
+		line = line_reader();
+		sign = semicolon(line);
+		tokens = line_parser(line);
+		condition = line_validator(tokens);
+
+		if (condition == 1 && sign == 1)
+		{
+			condition = executing(tokens, line);
+		}
+		free(line);
+		free(tokens);
 	}
-	free(line);
-	return (0);
+	return (EXIT_SUCCESS);
+}
+/**
+ * sigint_controld -  Signal Handler function.
+ * @sigint: To catch SIGINT next time, need reset the Handler.
+ *
+ * Return: Nothing.
+ */
+void sigint_controld(int sigint)
+{
+	(void)sigint;
+
+	signal(SIGINT, sigint_controld);
+	write(STDOUT_FILENO, "\n$ ", 3);
+	fflush(stdout);
 }

@@ -1,17 +1,17 @@
-#include "holberton.h"
-
+#include "header.h"
 /**
-*errors - printf if de comand recived is incorrect.
-*
-* @error: recives the value of  the funcion token.
-*/
-
-void errors(char **error)
+ * errors - Handle errors function.
+ * @tokens: The case error.
+ *
+ * Description: function handles error controls.
+ *
+ * Return: Nothing.
+ */
+void errors(char __attribute__((unused)) **tokens)
 {
-	if (error[0])
-
+	if (tokens[0])
 	{
-	write(STDOUT_FILENO, *error, 3);
+	write(STDOUT_FILENO, "hsh", 3);
 	write(STDOUT_FILENO, ": ", 2);
 	write(STDOUT_FILENO, "1", 1);
 	write(STDOUT_FILENO, ": ", 2);

@@ -1,12 +1,12 @@
-#include "header.h"
+#include "holberton.h"
+
 /**
- * _env - environment function.
- * @commands: General commands.
+ *_env - tenvironment variable
  *
- * Description: function to prints the environments variables.
+ *@commands: recives the value of  the funcion token.
  *
- * return: Nothing.
  */
+
 void _env(char **commands)
 {
 	int i;
@@ -18,28 +18,30 @@ void _env(char **commands)
 	}
 
 	for (i = 0; s; i++)
+
 	{
 		write(STDIN_FILENO, s, _strlen(s));
 		write(STDIN_FILENO, "\n", 1);
 		s = *(environ + i);
 	}
 }
+
 /**
- * _cd - explore function.
- * @args: The number of arguments for cd.
+ *_cd - functions.
  *
- * Description: function to change of directories in this Shell.
+ *@args: recives the value of  the funcion token.
  *
- * Return: Always 2, to continue executing.
+ *Return: return(2);
  */
 
 int _cd(char **args)
 {
 	if (args[1] == NULL)
 	{
-		return (2);
+		errors(args);
 	}
 	else
+
 	{
 		if (chdir(args[1]) != 0)
 		{
