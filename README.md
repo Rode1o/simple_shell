@@ -46,7 +46,7 @@ To exit program:
 |**File**| **Description** |
 |--|--|
 | main.c | The main function|
-|holberton.h| Header file|
+|holberton.h| list all the necessary libraries and function prototypes|
 |AUTHORS | Creators|
 |README.md|	|
 |Builtin.c||
