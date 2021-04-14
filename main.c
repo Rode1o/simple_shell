@@ -30,7 +30,8 @@ int main(void)
 		if (num == EOF)
 		{
 			free(line);
-			return(0);
+			write(STDOUT, "\n", 1);
+			exit(0);
 		}
 
 		token(line, tok);
