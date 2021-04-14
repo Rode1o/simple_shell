@@ -53,7 +53,7 @@ To exit program:
 |controld.c||
 |errors.c||
 |execute1.c|Executes arguments given by main (getline) function|
-|strfunctions.c||
+|strfunctions.c|Auxiliary functions for printing|
 |token.c||
 |validators.c||
 ### Restrictions
