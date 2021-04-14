@@ -55,7 +55,7 @@ To exit program:
 |execute1.c|Executes arguments given by main (getline) function|
 |strfunctions.c|Auxiliary functions for printing|
 |token.c|Interprets user input with the delimiters |
-|validators.c||
+|validators.c|In this file there is a function in charge of comparing if the tokens are built-in|
 ### Restrictions
 List of allowed functions and system calls:
 
