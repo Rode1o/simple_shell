@@ -10,19 +10,18 @@
 void _env(char **commands)
 {
 	int i;
-	char *s = *environ;
+	char *s;
 
 	if (commands[1] != NULL)
 	{
 		return;
 	}
 
-	for (i = 0; s; i++)
-
+	for (i = 0; environ[i] != '\0'; i++)
 	{
+		s  = environ[i];
 		write(STDIN_FILENO, s, _strlen(s));
 		write(STDIN_FILENO, "\n", 1);
-		s = *(environ + i);
 	}
 }
 
