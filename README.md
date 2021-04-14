@@ -50,6 +50,7 @@ To exit program:
 |AUTHORS | Creators|
 |README.md|	|
 |Builtin.c||
+|controld.c||
 
 ### Restrictions
 List of allowed functions and system calls:
