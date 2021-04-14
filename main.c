@@ -28,7 +28,7 @@ int main(void)
 		if (num == EOF)
 		{
 			free(line);
-			return (NULL);
+			return (0);
 		}
 		token(line, tok);
 		validators = line_validator(tok);
