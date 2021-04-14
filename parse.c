@@ -30,13 +30,13 @@ char **line_parser(char *line)
 		exit(EXIT_FAILURE);
 
 	}
-	slice = strtok(line, " \t\n\r");
+	slice = strtok(line, ",!?\'\"\n\t\r");
 	while (slice)
 	{
 		tokens[position] = slice;
 		position++;
 
-		slice = strtok(NULL, " \t\n\r");
+		slice = strtok(NULL, " ,!?\'\"\n\t\r");
 	}
 	tokens[position] = NULL;
 	return (tokens);
