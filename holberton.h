@@ -12,8 +12,6 @@
 
 extern char **environ;
 
-/*char buffer[512];
-*/
 int main(void);
 void token(char *line, char **tok);
 int execute(char *tokens[], char *line);

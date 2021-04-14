@@ -22,7 +22,6 @@ void _env(char **commands)
 		write(STDIN_FILENO, s, _strlen(s));
 		write(STDIN_FILENO, "\n", 1);
 		s = *(environ + i);
-
 	}
 }
 
@@ -38,13 +37,14 @@ int _cd(char **args)
 {
 	if (args[1] == NULL)
 	{
-		/*errors(args);*/
+		errors(args);
 	}
 	else
 	{
 		if (chdir(args[1]) != 0)
 		{
 			chdir(args[1]);
+			return (0);
 		}
 	}
 	return (2);
