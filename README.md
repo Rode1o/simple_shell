@@ -49,7 +49,7 @@ To exit program:
 |holberton.h| list all the necessary libraries and function prototypes|
 |AUTHORS | Creators|
 |README.md|	|
-|Builtin.c||
+|Builtin.c|Analyzes and runs the builtins|
 |controld.c||
 |errors.c||
 |execute1.c||
