@@ -41,6 +41,14 @@ int main(void)
 			free(line);
 			exit(0);
 		}
+		else if(validators == 3)
+		{
+			_env(tok);
+		}
+		else if (validators == 4)
+		{
+			_cd(tok);
+		}
 		else
 		{
 			execute(tok, line);
