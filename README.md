@@ -55,6 +55,7 @@ To exit program:
 |execute1.c||
 |strfunctions.c||
 |token.c||
+|validators.c||
 ### Restrictions
 List of allowed functions and system calls:
 
