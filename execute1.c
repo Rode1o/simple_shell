@@ -30,7 +30,7 @@ int execute(char **tokens, char *line)
 	{
 		*tokens = NULL;
 		line = NULL;
-		return (0);
+		 exit(0);
 	}
 	pid = fork();
 	if (pid == 0)
@@ -39,7 +39,6 @@ int execute(char **tokens, char *line)
 		{
 			errors(tokens);
 			exit(EXIT_FAILURE);
-			return (0);
 		}
 	}
 	else if (pid < 0)
