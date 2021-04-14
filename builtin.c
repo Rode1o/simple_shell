@@ -43,8 +43,7 @@ int _cd(char **args)
 	{
 		if (chdir(args[1]) != 0)
 		{
-			chdir(args[1]);
-			return (0);
+			errors(args);
 		}
 	}
 	return (2);

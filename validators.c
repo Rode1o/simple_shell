@@ -27,7 +27,7 @@ int line_validator(char *tok[])
 	if (_strcmp(tok[0], "cd") == 0)
 	{
 		_cd(tok);
-		return (3);
+		return (4);
 	}
 	return (1);
 }
