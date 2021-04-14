@@ -16,7 +16,6 @@ int execute(char **tokens, char *line)
 
 	while (line[i] == ' ')
 		i++;
-
 	if (line[i] == path[0])
 	{
 		_strcpy(path, *tokens);
