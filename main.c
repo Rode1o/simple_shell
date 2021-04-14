@@ -30,7 +30,6 @@ int main(void)
 		if (num == EOF)
 		{
 			free(line);
-			write(STDOUT, "\n", 1);
 			exit(0);
 		}
 
