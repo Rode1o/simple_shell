@@ -6,17 +6,17 @@
 * @error: recives the value of  the funcion token.
 */
 
-void errors(char **error)
+void errors(char __attribute__((unused)) **error)
 {
 	if (error[0])
 
 	{
-	write(STDOUT_FILENO, *error, 3);
-	write(STDOUT_FILENO, ": ", 2);
-	write(STDOUT_FILENO, "1", 1);
-	write(STDOUT_FILENO, ": ", 2);
-	write(STDOUT_FILENO, ": ", 2);
-	write(STDOUT_FILENO, "not found", _strlen("not found"));
-	write(STDOUT_FILENO, "\n", _strlen("\n"));
+	write(STDERR_FILENO, *error, 3);
+	write(STDERR_FILENO, ": ", 2);
+	write(STDERR_FILENO, "1", 1);
+	write(STDERR_FILENO, ": ", 2);
+	write(STDERR_FILENO, ": ", 2);
+	write(STDERR_FILENO, "not found", _strlen("not found"));
+	write(STDERR_FILENO, "\n", _strlen("\n"));
 	}
 }
