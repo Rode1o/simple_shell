@@ -15,8 +15,7 @@ int main(void)
 	char *tok[1024];/*valor cualquira*/
 	int validators = 1;
 	char buffer[1024];
-
-	signal(SIGINT, sigint_handler);
+	/*signal(SIGINT, sigint_handler);*/
 	while (1)
 	{
 		if (isatty(STDIN_FILENO))
@@ -36,7 +35,6 @@ int main(void)
 		if (validators == 0)
 		{
 			free(line);
-			/*_putchar('\n');*/
 			exit(EXIT_SUCCESS);
 		}
 		else if (validators == 3)
