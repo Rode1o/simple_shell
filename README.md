@@ -53,7 +53,7 @@ To exit program:
 |controld.c||
 |errors.c||
 |execute1.c||
-
+|strfunctions.c||
 ### Restrictions
 List of allowed functions and system calls:
 
