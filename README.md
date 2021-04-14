@@ -51,6 +51,7 @@ To exit program:
 |README.md|	|
 |Builtin.c||
 |controld.c||
+|errors.c||
 
 ### Restrictions
 List of allowed functions and system calls:
