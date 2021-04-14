@@ -52,7 +52,7 @@ To exit program:
 |Builtin.c|Analyzes and runs the builtins|
 |controld.c||
 |errors.c||
-|execute1.c||
+|execute1.c|Executes arguments given by main (getline) function|
 |strfunctions.c||
 |token.c||
 |validators.c||
