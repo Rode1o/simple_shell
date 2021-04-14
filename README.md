@@ -98,12 +98,12 @@ List of allowed functions and system calls:
 ## Authors
 **Juan Jose Arteta**
 
- - [ ] [Social media](https://twitter.com/jarteta2004)
- - [ ] [Contact me!](https://github.com/jj131204)
+ - [ ] [@jarteta2004](https://twitter.com/jarteta2004)
+ - [ ] [Github](https://github.com/jj131204)
 
 **Duvan Rodelo**
- - [ ] [Social media](https://twitter.com/duvanrode1o)
- - [ ] [Contact me!](https://github.com/Rode1o)
+ - [ ] [@duvanrode1o](https://twitter.com/duvanrode1o)
+ - [ ] [Github](https://github.com/Rode1o)
 
 
 ### Date
