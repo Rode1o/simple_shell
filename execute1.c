@@ -30,7 +30,7 @@ int execute(char **tokens, char *line)
 	{
 		*tokens = NULL;
 		line = NULL;
-		 exit(0);
+		return (0);
 	}
 	pid = fork();
 	if (pid == 0)
