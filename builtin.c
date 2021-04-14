@@ -41,6 +41,7 @@ int _cd(char **args)
 		errors(args);
 	}
 	else
+
 	{
 		if (chdir(args[1]) != 0)
 		{

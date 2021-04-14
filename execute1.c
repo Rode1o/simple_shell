@@ -1,6 +1,4 @@
 #include "holberton.h"
-
-
 /**
  *execute - check  if the command recived is true.
  *
@@ -10,12 +8,10 @@
  *
  *Return: return (1).
  */
-
 int execute(char **tokens, char *line)
 {
 	pid_t pid;
 	int i = 0;
-
 	char path[1024] = "/bin";
 
 	while (line[i] == ' ')

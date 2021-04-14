@@ -1,5 +1,4 @@
 #include "holberton.h"
-
 /**
  *line_validator - validates if the function receives an exit, env or cd
  *

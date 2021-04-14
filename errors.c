@@ -9,6 +9,7 @@
 void errors(char **error)
 {
 	if (error[0])
+
 	{
 	write(STDOUT_FILENO, *error, 3);
 	write(STDOUT_FILENO, ": ", 2);
