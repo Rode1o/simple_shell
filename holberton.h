@@ -9,9 +9,10 @@
 #include <sys/stat.h>
 
 #define SEPARATORS " ,!?\'\"\n\t"
+#define STDOUT STDOUT_FILENO
+#define STDIN STDIN_FILENO
 
 extern char **environ;
-
 
 int main(void);
 void token(char *line, char **tok);
@@ -28,5 +29,7 @@ char *_strcpy(char *dest, char *src);
 int _strcmp(char *s1, char *s2);
 int _strlen(char *s);
 char *_strcat(char *dest, char *src);
+
+int _putchar(char c);
 
 #endif

@@ -21,11 +21,11 @@ int line_validator(char *tok[])
 	}
 	if (_strcmp(tok[0], "env") == 0)
 	{
-		_env(tok);
+		return (3);
 	}
 	if (_strcmp(tok[0], "cd") == 0)
 	{
-		return (_cd(tok));
+		return (4);
 	}
 	return (1);
 }

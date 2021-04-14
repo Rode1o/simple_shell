@@ -18,11 +18,11 @@ void _env(char **commands)
 	}
 
 	for (i = 0; s; i++)
+
 	{
 		write(STDIN_FILENO, s, _strlen(s));
 		write(STDIN_FILENO, "\n", 1);
 		s = *(environ + i);
-
 	}
 }
 
@@ -38,7 +38,7 @@ int _cd(char **args)
 {
 	if (args[1] == NULL)
 	{
-		return (2);
+		errors(args);
 	}
 	else
 	{
