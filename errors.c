@@ -5,7 +5,6 @@
 *
 * @error: recives the value of  the funcion token.
 */
-
 void errors(char __attribute__((unused)) **error)
 {
 	if (error[0])
