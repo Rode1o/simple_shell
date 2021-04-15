@@ -46,6 +46,17 @@ int execute(char **tokens, char *line)
 	return (1);
 }
 
+/**
+ * _fork - check  if the command recived is true.
+ *
+ *@tokens: recives the value of  the funcion token.
+ *
+ *@line: arguments received
+ *
+ *@path: path
+ *
+ */
+
 void _fork(char *path, char **tokens, char *line)
 {
 	pid_t pid;

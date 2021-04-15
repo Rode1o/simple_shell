@@ -15,7 +15,7 @@ int main(void)
 	char *tok[1024];/*valor cualquira*/
 	int validators = 1;
 	char buffer[1024];
-	
+
 	signal(SIGINT, sigint_handler);
 	while (1)
 	{
@@ -28,14 +28,12 @@ int main(void)
 		if (num == EOF)
 		{
 			free(line);
-			/*return (0);*/
 			if (isatty(STDIN) != 0)
 				write(STDOUT, "\n", 1);
 			return (0);
 		}
 		token(line, tok);
 		validators = line_validator(tok);
-
 		if (validators == 0)
 		{
 			free(line);
