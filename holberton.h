@@ -7,6 +7,7 @@
 #include <stdlib.h>
 #include <sys/wait.h>
 #include <sys/stat.h>
+#include <sys/types.h>
 
 #define SEPARATORS " ,!?\'\"\n\t"
 #define STDOUT STDOUT_FILENO
