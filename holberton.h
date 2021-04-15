@@ -7,6 +7,7 @@
 #include <stdlib.h>
 #include <sys/wait.h>
 #include <sys/stat.h>
+#include <sys/types.h>
 
 #define SEPARATORS " ,!?\'\"\n\t"
 #define STDOUT STDOUT_FILENO
@@ -27,7 +28,7 @@ int semicolon(char *line);
 void _fork(char *path, char **tokens, char *line);
 
 
-char *_strcpy(char *dest, char *src);
+char *cpystrcpy(char *dest, char *src);
 int _strcmp(char *s1, char *s2);
 int _strlen(char *s);
 char *_strcat(char *dest, char *src);
