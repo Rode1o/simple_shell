@@ -24,5 +24,7 @@ void token(char *line, char *tok[])
 	{
 		token = strtok(NULL, SEPARATORS);
 		tok[count] = token;
+
+
 	}
 }

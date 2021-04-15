@@ -16,12 +16,14 @@ void _env(char **commands)
 	{
 		return;
 	}
-
-	for (i = 0; environ[i] != '\0'; i++)
+	else
 	{
-		s  = environ[i];
-		write(STDIN_FILENO, s, _strlen(s));
-		write(STDIN_FILENO, "\n", 1);
+		for (i = 0; environ[i] != '\0'; i++)
+		{
+			s  = environ[i];
+			write(STDOUT_FILENO, s, _strlen(s));
+			write(STDOUT_FILENO, "\n", 1);
+		}
 	}
 }
 
