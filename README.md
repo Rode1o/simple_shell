@@ -56,6 +56,12 @@ To exit program:
 |strfunctions.c|Auxiliary functions for printing|
 |token.c|Interprets user input with the delimiters |
 |validators.c|In this file there is a function in charge of comparing if the tokens are built-in|
+
+### Note
+If you want to review our simple shell manual, execute on your terminal :
+
+    $man ./man_1_simple_shell
+
 ### Restrictions
 List of allowed functions and system calls:
 
