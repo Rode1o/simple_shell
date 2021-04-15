@@ -41,12 +41,12 @@ int execute(char **tokens, char *line)
 		return (0);
 	}
 
-	_fork(path, tokens);
+	_fork(path, tokens, line);
 
 	return (1);
 }
 
-void _fork(char *path, char **tokens)
+void _fork(char *path, char **tokens, char *line)
 {
 	pid_t pid;
 
@@ -56,14 +56,14 @@ void _fork(char *path, char **tokens)
 		if (execve(path, tokens, environ) == -1)
 		{
 			errors(tokens);
-			/*return (0);*/
+			free(line);
 			exit(EXIT_FAILURE);
 		}
 	}
 	else if (pid < 0)
 	{
 		errors(tokens);
-		exit(EXIT_FAILURE);
+		return;
 	}
 	else
 		wait(NULL);
