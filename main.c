@@ -12,7 +12,7 @@ int main(void)
 	size_t bufsize = 0;
 	int num;
 	char *str = "#C_isfun$ ";
-	char *tok[1024];/*valor cualquira*/
+	char *tok[1024];
 	int validators = 1;
 	
 
