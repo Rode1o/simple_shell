@@ -5,7 +5,6 @@
  *
  *@sigint: control_d.
  */
-
 void sigint_handler(int sigint)
 {
 
