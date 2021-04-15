@@ -67,9 +67,9 @@ void _fork(char *path, char **tokens, char *line)
 		if (execve(path, tokens, environ) == -1)
 		{
 			errors(tokens);
-			free(line);
-			exit(EXIT_FAILURE);
 		}
+		exit(EXIT_FAILURE);
+		free(line);
 	}
 	else if (pid < 0)
 	{
