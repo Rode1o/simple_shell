@@ -14,7 +14,6 @@ int main(void)
 	char *str = "#C_isfun$ ";
 	char *tok[1024];
 	int validators = 1;
-	
 
 	signal(SIGINT, sigint_handler);
 	while (1)
