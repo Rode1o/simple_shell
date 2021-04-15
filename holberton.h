@@ -24,6 +24,8 @@ void _env(char **commands);
 int _cd(char **args);
 void errors(char __attribute__((unused)) **tokens);
 int semicolon(char *line);
+void _fork (char *path, char **tokens);
+
 
 char *_strcpy(char *dest, char *src);
 int _strcmp(char *s1, char *s2);

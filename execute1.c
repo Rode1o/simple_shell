@@ -8,11 +8,12 @@
  *
  *Return: return (1).
  */
+
 int execute(char **tokens, char *line)
 {
-	pid_t pid;
 	int i = 0;
 	char path[1024] = "/bin";
+	struct stat st;
 
 	while (line[i] == ' ')
 		i++;
@@ -23,7 +24,15 @@ int execute(char **tokens, char *line)
 
 	else if (tokens[0])
 	{
-		_strcat(path, "/"), _strcat(path, *tokens);
+		if (stat(*tokens, &st) == 0 && st.st_mode & X_OK)
+		{
+			execve(tokens[0], tokens, NULL);
+			return (0);
+		}
+		else
+		{
+			_strcat(path, "/"), _strcat(path, *tokens);
+		}
 	}
 	else
 	{
@@ -31,6 +40,16 @@ int execute(char **tokens, char *line)
 		line = NULL;
 		return (0);
 	}
+
+	_fork(path, tokens);
+
+	return (1);
+}
+
+void _fork(char *path, char **tokens)
+{
+	pid_t pid;
+
 	pid = fork();
 	if (pid == 0)
 	{
@@ -48,6 +67,4 @@ int execute(char **tokens, char *line)
 	}
 	else
 		wait(NULL);
-
-	return (1);
 }
