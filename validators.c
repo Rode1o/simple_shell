@@ -10,19 +10,20 @@
 
 int line_validator(char *tok[])
 {
+
 	if (tok[0] == NULL)
 	{
 		return (2);
 	}
-	if (_strcmp(tok[0], "exit") == 0)
+	if (_strcmp("exit", tok[0]) == 0)
 	{
 		return (0);
 	}
-	if (_strcmp(tok[0], "env") == 0)
+	if (_strcmp("env", tok[0]) == 0)
 	{
 		return (3);
 	}
-	if (_strcmp(tok[0], "cd") == 0)
+	if (_strcmp("cd", tok[0]) == 0)
 	{
 		return (4);
 	}

@@ -1,4 +1,5 @@
 #include "holberton.h"
+
 /**
  *execute - check  if the command recived is true.
  *
@@ -67,12 +68,11 @@ void _fork(char *path, char **tokens, char *line)
 			errors(tokens);
 		}
 		free(line);
-		exit(EXIT_FAILURE);
+		exit(EXIT_SUCCESS);
 	}
 	else if (pid < 0)
 	{
 		errors(tokens);
-		return;
 	}
 	else
 		wait(NULL);
