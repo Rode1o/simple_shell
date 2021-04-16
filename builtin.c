@@ -7,12 +7,12 @@
  *
  */
 
-void _env(char **commands)
+void _env(char *tok[])
 {
 	int i;
 	char *s;
 
-	if (commands[1] != NULL)
+	if (tok[1] != NULL)
 	{
 		return;
 	}
@@ -35,18 +35,18 @@ void _env(char **commands)
  *Return: return(2);
  */
 
-int _cd(char **args)
+int _cd(char *tok[])
 {
-	if (args[1] == NULL)
+	if (tok[1] == NULL)
 	{
-		errors(args);
+		errors(tok);
 	}
 	else
 
 	{
-		if (chdir(args[1]) != 0)
+		if (chdir(tok[1]) != 0)
 		{
-			errors(args);
+			errors(tok);
 		}
 	}
 	return (2);

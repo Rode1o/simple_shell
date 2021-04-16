@@ -14,12 +14,15 @@ void token(char *line, char *tok[])
 	char *token = NULL;
 	int count = 0;
 
+	if (!tok)
+                return;
+
 	token = strtok(line, SEPARATORS);
 	tok[count] = token;
 
-	if (!tok)
+	/*if (!tok)
 		return;
-
+*/
 	for (count = 1; token != NULL; count++)
 	{
 		token = strtok(NULL, SEPARATORS);
