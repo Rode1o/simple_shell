@@ -19,7 +19,7 @@ int execute(char **tokens, char *line)
 		i++;
 	if (line[i] == path[0])
 	{
-		cpystrcpy(path, *tokens);
+		_strcpy(path, *tokens);
 	}
 
 	else if (tokens[0])

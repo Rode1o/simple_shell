@@ -22,7 +22,7 @@ int _strlen(char *s)
  * @src: source
  * Return: Always 0.
  */
-char *cpystrcpy(char *dest, char *src)
+char *_strcpy(char *dest, char *src)
 {
 	int i;
 
