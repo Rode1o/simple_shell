@@ -73,6 +73,7 @@ void _fork(char *path, char **tokens, char *line)
 	else if (pid < 0)
 	{
 		errors(tokens);
+		/*exit(EXIT_SUCCESS);*/
 	}
 	else
 		wait(NULL);
