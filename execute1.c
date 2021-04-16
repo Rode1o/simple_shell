@@ -11,36 +11,35 @@
  */
 int execute(char **tokens, char *line)
 {
-	int i = 0;
-	char path[1024] = "/bin";
-	struct stat st;
+	int i = 0, o;
+	char path[8192] = "/bin", *aux = "/b", *aux2 = " /b.h";
+	
 
 	while (line[i] == ' ')
 		i++;
-	if (line[i] == path[0])
+	if (line[i] == aux[0] && line[1] == aux[1])
 	{
 		_strcpy(path, *tokens);
 	}
-
-	else if (tokens[0])
+	else if (line[i] == aux2[0])
 	{
-		if (stat(*tokens, &st) == 0 && st.st_mode & X_OK)
+		for (o = 0; line[o] != '\0'; o++)
 		{
-			execve(tokens[0], tokens, NULL);
-			return (0);
+			if (line[o] == aux2[1])
+				if (line[o - 1] == aux2[0])
+					_strcpy(path, "/bin/ls");
 		}
-		else
+	}
+	else if (line[0] == aux2[3] && line[2] == aux2[4])
+		_strcpy(path, "/bin/ls");
+	
+		
+	else 
 		{
 			_strcat(path, "/"), _strcat(path, *tokens);
 		}
-	}
-	else
-	{
-		*tokens = NULL;
-		line = NULL;
-		return (0);
-	}
-
+	
+	
 	_fork(path, tokens, line);
 
 	return (1);
@@ -59,6 +58,7 @@ int execute(char **tokens, char *line)
 void _fork(char *path, char **tokens, char *line)
 {
 	pid_t pid;
+	int status;
 
 	pid = fork();
 	if (pid == 0)
@@ -76,5 +76,8 @@ void _fork(char *path, char **tokens, char *line)
 		/*exit(EXIT_SUCCESS);*/
 	}
 	else
+	do {
+			waitpid(pid, &status, WUNTRACED);
+		} while (!WIFEXITED(status) && !WIFSIGNALED(status));
 		wait(NULL);
 }
