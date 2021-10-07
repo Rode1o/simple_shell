@@ -1,4 +1,4 @@
-![Holberton logo](https://www.holbertonschool.com/holberton-logo.png)
+<img align="center" src="https://github.com/SergioO21/holbertonschool-low_level_programming/blob/main/holberton-logo.png?raw=true"/>
 
 # Simple Shell
 15 day end of first trimester project for Holberton School - Cohort 14 - April 2021.
